@@ -20,9 +20,11 @@ The primary goal of this task is to develop a solution using problem-solving tec
 - Course: CS213 – Problem Solving & Programming Concepts.
 
 ## **Problems:**
-- **Document Similarity with String Sets :** calculates document similarity using a StringSet class, which stores unique words from each document while ignoring punctuation and case. It supports adding, removing, and performing union and intersection operations on sets. Document similarity is measured with the binary cosine coefficient, producing a score between 0 and 1, where 1 indicates high similarity. The program includes functions to test these features, allowing users to load documents and evaluate their similarity.
+- **Document Similarity with String Sets :**
+    - Calculates document similarity using a StringSet class, which stores unique words from each document while ignoring punctuation and case. It supports adding, removing, and performing union and intersection operations on sets. Document similarity is measured with the binary cosine coefficient, producing a score between 0 and 1, where 1 indicates high similarity. The program includes functions to test these features, allowing users to load documents and evaluate their similarity.
 
-- **Simple Task Manager: Monitoring and Sorting Processes :** Interactive menu system for adding new players, displaying the top 10 players, searching for a player's highest score, and exiting the program.
+- **Simple Task Manager: Monitoring and Sorting Processes :**
+    - Interactive menu system for adding new players, displaying the top 10 players, searching for a player's highest score, and exiting the program.
 
 ## **Algorithms:**
 
