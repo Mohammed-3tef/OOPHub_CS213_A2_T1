@@ -29,12 +29,12 @@ The primary goal of this task is to develop a solution using problem-solving tec
 ## **Algorithms:**
 
 - <details>
-    <summary>Document Similarity with String Sets.</summary>
+    <summary>Document Similarity.</summary>
     
 </details>
 
 - <details>
-    <summary>Simple Task Manager: Monitoring and Sorting Processes.</summary>
+    <summary>Simple Task Manager.</summary>
     
 </details>
 
