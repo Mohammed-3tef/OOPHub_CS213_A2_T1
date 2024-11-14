@@ -1,5 +1,5 @@
 /*
-File: A2_T1_S19_20231143.cpp
+File: A2_T1_S19_20231143_SheetPb2.cpp
 Purpose: Solving Problem 2
 Author: Mohammed Atef Abd El-Kader
 ID: 20231143
@@ -362,7 +362,8 @@ int main () {
 
                     StringSet intersectionSet = mySet * mySecondSet;
                     // Compute the similarity between the two sets.
-                    cout << "The Similarity between the Two Sets = \n(" << intersectionSet.numberOfWords() << ") / (sqrt("<< mySet.numberOfWords() << ") * sqrt(" << mySecondSet.numberOfWords() << ")) = " << mySet.computesSimilarity(mySecondSet) << "%" << endl << endl;
+                    cout << "The Similarity between the Two Sets = \n(" << intersectionSet.numberOfWords() << ") / (sqrt("<< mySet.numberOfWords() << ") * sqrt(" << mySecondSet.numberOfWords() << ")) = "
+                    << mySet.computesSimilarity(mySecondSet) /100 << " = " << mySet.computesSimilarity(mySecondSet) << "%" << endl << endl;
                 }
                 // If the user wants to go back.
                 else if (secondChoice == "9") {
