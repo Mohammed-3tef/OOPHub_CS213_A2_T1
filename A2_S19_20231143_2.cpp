@@ -16,8 +16,9 @@ Version: 1.0
     The program includes functions to test these features, allowing users to load documents and evaluate their similarity.
 
 ---> GitHub Repo Link: https://github.com/Mohammed-3tef/OOPHub_CS213_A2_T1
-        (It's private now, and it will be public after 25 Nov 2024).
-        But now you can look at some photos of the repo in this link:
+        (It's private now, and it will be public after 25 Nov 2024 ISA).
+        But now you can look at some photos of the repo in this link: https://drive.google.com/drive/folders/1uyIkiQ9Rr44Bo0zCeyOBZWrh3_f1hSI8?usp=drive_link
+        If you like it, don't forget the bonus :)
 */
 
 #include <bits/stdc++.h>
@@ -169,6 +170,18 @@ public:
         }
         return intersectionSet;
     }
+
+    double computesSimilarity(StringSet& secondSet) {
+        // Calculate the numerator of the binary cosine coefficient.
+        StringSet intersectionSet = *this * secondSet;
+        int numerator = intersectionSet.numberOfWords();
+
+        // Calculate the denominator of the binary cosine coefficient.
+        double denominator = sqrt(int(words.size())) * sqrt(int(secondSet.words.size()));
+
+        // Calculate the binary cosine coefficient.
+        return 100 * double(numerator) / denominator;
+    }
 };
 
 int main () {
@@ -210,7 +223,8 @@ int main () {
                         " 5) Perform Union.\n"
                         " 6) Perform Intersection.\n"
                         " 7) Number of Words.\n"
-                        " 8) Back." << endl;
+                        " 8) Computes The Similarity.\n"
+                        " 9) Back." << endl;
                 cout << "Enter Your Choice :";
                 string secondChoice;
                 getline(cin, secondChoice);
@@ -311,10 +325,47 @@ int main () {
                 }
                 // If the user wants to get the number of words in the set.
                 else if (secondChoice == "7") {
-                    cout << "The Number of Words in the Set is: " << mySet.numberOfWords() << endl << endl;
+                    cout << endl << "The Number of Words in the Set is: " << mySet.numberOfWords() << endl << endl;
+                }
+                // If the user wants to compute the similarity.
+                else if (secondChoice == "8") {
+                    StringSet mySecondSet;
+                    while (true) {
+                        // Ask the user to enter the file path or the sentence.
+                        cout << endl << "Which will you input ??" << endl;
+                        cout << " 1) Enter the file path.\n 2) Enter the sentence."<< endl;
+                        cout << "Enter Your Choice :";
+                        string thirdChoice; getline(cin, thirdChoice);
+
+                        // If the user wants to load the file.
+                        if (thirdChoice == "1") {
+                            string firstFilePath;
+                            cout << endl << "Enter the Second File Path :";
+                            getline(cin, firstFilePath);
+                            ifstream file(firstFilePath);
+                            mySecondSet = StringSet(file);
+                            break;
+                        }
+
+                            // If the user wants to enter a sentence.
+                        else if (thirdChoice == "2") {
+                            string currentLine;
+                            cout << endl << "Enter the Second Sentence :";
+                            getline(cin, currentLine);
+                            mySecondSet = StringSet(currentLine);
+                            break;
+                        }
+
+                            // If the user enters an invalid choice.
+                        else cout << "Please, Enter a valid choice..." << endl;
+                    }
+
+                    StringSet intersectionSet = mySet * mySecondSet;
+                    // Compute the similarity between the two sets.
+                    cout << "The Similarity between the Two Sets = \n(" << intersectionSet.numberOfWords() << ") / (sqrt("<< mySet.numberOfWords() << ") * sqrt(" << mySecondSet.numberOfWords() << ")) = " << mySet.computesSimilarity(mySecondSet) << "%" << endl << endl;
                 }
                 // If the user wants to go back.
-                else if (secondChoice == "8") {
+                else if (secondChoice == "9") {
                     cout << "Back to the Main Menu..." << endl << endl;
                     break;
                 }
