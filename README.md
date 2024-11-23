@@ -17,14 +17,19 @@ The primary goal of this task is to develop a solution using problem-solving tec
 
 ## **Requirements:**
 - Programming Language: C++.
-- Course: CS213 – Problem Solving & Programming Concepts.
+- Course: CS213 – Problem-Solving & Programming Concepts.
 
 ## **Problems:**
 - **Document Similarity with String Sets :**
-    - Calculates document similarity using a StringSet class, which stores unique words from each document while ignoring punctuation and case. It supports adding, removing, and performing union and intersection operations on sets. Document similarity is measured with the binary cosine coefficient, producing a score between 0 and 1, where 1 indicates high similarity. The program includes functions to test these features, allowing users to load documents and evaluate their similarity.
+    - Calculates document similarity using a StringSet class, which stores unique words from each document while ignoring punctuation and case. 
+      It supports adding, removing, and performing union and intersection operations on sets. Document similarity is measured with the binary cosine coefficient, 
+      producing a score between 0 and 1, where 1 indicates high similarity. The program includes functions to test these features, 
+      allowing users to load documents and evaluate their similarity.
 
 - **Simple Task Manager: Monitoring and Sorting Processes :**
-    - Interactive menu system for adding new players, displaying the top 10 players, searching for a player's highest score, and exiting the program.
+    - A program that displays the processes running on the system. The program reads the output of the "tasklist" command and parses the
+      process details (image name, PID, session name, session ID, and memory usage). The user can display the processes, sort them by image
+      name, PID, or memory usage, and exit the program.
 
 ## **Algorithms:**
 
@@ -44,8 +49,9 @@ If you'd like to contribute to this repository, feel free to fork the project an
 ## **Author:**
 - **Name:** [Mohammed Atef Abd El-Kader.](https://www.linkedin.com/in/mohammed-atef-b0a408299/)
 - **ID:** 20231143
-- **Date:** 15 Nov 2024
-- **Version:** 1.0
+- **Date:** 
+  - **Problem 2:** 15 Nov 2024
+  - **Problem 5:** 25 Nov 2024
 
 ## **License:**
 This project is licensed under the MIT License – see the [LICENSE](https://github.com/Mohammed-3tef/OOPHub_CS213_A2_T1/blob/main/LICENSE) file for details.
